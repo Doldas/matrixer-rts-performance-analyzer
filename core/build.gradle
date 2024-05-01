@@ -4,7 +4,7 @@ plugins {
 }
 
 dependencies {
-    compile group: 'com.github.djeang', name: 'vincer-dom', version: '1.0.0'
+    api group: 'com.github.djeang', name: 'vincer-dom', version: '1.0.0'
     implementation files("${project.rootDir}/libs/slf4j-simple-1.7.9.jar")
 }
 

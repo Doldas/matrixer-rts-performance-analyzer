@@ -15,6 +15,7 @@
  */
 package org.matrixer.agent;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.io.ByteArrayOutputStream;
@@ -204,7 +205,10 @@ class InvocationLoggerTest {
     void assertFound(String[] output, int depth, String method, String testCase) {
         String expected = new MethodCall(depth, method, testCase).asLine();
         List<String> lines = List.of(output);
-        assertTrue(lines.contains(expected), "Output did not contain method: " + expected);
+        assertThat(lines)
+                .as( "Output did not contain method: " + expected)
+                .map(line -> line.replaceAll("[\n\r]", ""))
+                .containsAnyOf(expected);
     }
 
     void assertEqualDepth(int depth, String[] output) {

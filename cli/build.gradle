@@ -6,6 +6,7 @@ plugins {
 dependencies {
     implementation project(':core')
     implementation project(':report')
+    testImplementation("org.assertj:assertj-core:3.25.1")
 }
 
 application {
