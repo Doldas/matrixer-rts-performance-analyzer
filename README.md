@@ -8,13 +8,13 @@ A tool for creating binary test coverage matrices of java code.
 
 ### Dependencies
 - Gradle
-- JDK >11
+- Maven
+- JDK 11
 
 ### Build and run
 1. Clone the repo to a local directory and open it.
-2. Assemble the tool and the agent using `gradlew assemble` or `gradlew build`.
-   The latter will run the tests in the process.
-3. Run the tool using `gradlew run --args "<options>"`, see below for available
+2. open up a terminal and execute `./install.sh`
+3. Run the tool using `./gradlew run --args "<options>"`, see below for available
    `<options>`.
 
 ### Synopsis
