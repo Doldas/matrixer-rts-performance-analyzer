@@ -12,6 +12,7 @@ bin/**
 tmp/**
 tmp/**/*
 maven_plugins/*
+scripts/maven_plugins/*
 *.tmp
 *.bak
 *.swp
